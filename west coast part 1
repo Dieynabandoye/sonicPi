@@ -1,9 +1,19 @@
 #west coast by Lana Del Ray
 
 use_bpm 115
+arrays1 = [:e5, :e5]
+a = :e5
+arrays2 = [:c5, :b4 ]
+b = :c5 + 1
+arrays3 = [:g4, :g4,:g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4]
 
-arrays = [:e5, :e5, :c5, :b4, :g4, :g4,:g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :c3, :e4, :g4, :a4, :a4, :a4, :c5, :c5, :c5, :d5]
-sleeps = [
+arrays4 = [:c3, :e4]
+arrays5 = [ :g4, :a4, :a4, :a4, :c5, :c5, :c5, :d5]
+sleeps1 = [4, 4]
+sleeps2 = [4, 4]
+sleeps3 = [1, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5 1]
+sleeps4 = [4, 4]
+sleeps5 = [4, 0.5, 0.5, 0.5, 1, 1, 1, 1]
 live_loop :line1 do
   play :e5
   sleep 4
