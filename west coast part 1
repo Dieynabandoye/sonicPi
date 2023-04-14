@@ -1,0 +1,70 @@
+#west coast by Lana Del Ray
+
+use_bpm 115
+
+arrays = [:e5, :e5, :c5, :b4, :g4, :g4,:g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :c3, :e4, :g4, :a4, :a4, :a4, :c5, :c5, :c5, :d5]
+sleeps = [
+live_loop :line1 do
+  play :e5
+  sleep 4
+  play :e5
+  sleep 4
+end
+live_loop :line2 do
+  play :c5
+  sleep 4
+  play :b4
+  sleep 4
+end
+live_loop :line3 do
+  play :g4
+  sleep 1
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+end
+live_loop :line4 do
+  play :c3
+  sleep 4
+  play :e4
+  sleep 4
+end
+live_loop :line5 do
+  sleep 4
+  play :g4
+  sleep 0.5
+  play :a4
+  sleep 0.5
+  play :a4
+  sleep 0.5
+  play :a4
+  sleep 1
+  play :c5
+  sleep 1
+  play :c5
+  sleep 1
+  play :c5
+  sleep 1
+  play :d5
+  sleep 1
+end
