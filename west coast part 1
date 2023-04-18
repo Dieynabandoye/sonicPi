@@ -2,79 +2,78 @@
 
 use_bpm 115
 arrays1 = [:e5, :e5]
-a = :e5
+a = 0
 arrays2 = [:c5, :b4 ]
-b = :c5 + 1
+b = 0
 arrays3 = [:g4, :g4,:g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4]
-
+c = 0
 arrays4 = [:c3, :e4]
+d = 0
 arrays5 = [ :g4, :a4, :a4, :a4, :c5, :c5, :c5, :d5]
+e = 0
 sleeps1 = [4, 4]
+x = 0
 sleeps2 = [4, 4]
-sleeps3 = [1, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5 1]
+y = 0
+sleeps3 = [1, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1]
+z = 0
 sleeps4 = [4, 4]
-sleeps5 = [4, 0.5, 0.5, 0.5, 1, 1, 1, 1]
+m = 0
+sleeps5 = [0.5, 0.5, 0.5, 1, 1, 1, 1]
+n = 0
+westcoast = "C:/Users/Dieynaba Ndoye/Documents/Audacity/Lizzy McAlpine - Ceilings (Acapella).wav"
+
 live_loop :line1 do
-  play :e5
-  sleep 4
-  play :e5
-  sleep 4
+  2.times do
+    play arrays1[a]
+    sleep sleeps1[x]
+    a = 0 + 1
+    x = 0 + 1
+  end
+  a = 0
+  x = 0
 end
 live_loop :line2 do
-  play :c5
-  sleep 4
-  play :b4
-  sleep 4
+  2.times do
+    sample :guit_e_fifths
+    play arrays2[b]
+    sleep sleeps2[y]
+    b = 0 + 1
+    y = 0 + 1
+  end
+  b = 0
+  y = 0
 end
 live_loop :line3 do
-  play :g4
-  sleep 1
-  play :g4
-  sleep 0.5
-  play :g4
-  sleep 1
-  play :g4
-  sleep 0.5
-  play :g4
-  sleep 0.5
-  play :g4
-  sleep 1
-  play :g4
-  play :g4
-  sleep 0.5
-  play :g4
-  sleep 0.5
-  play :g4
-  sleep 1
-  play :g4
-  sleep 0.5
-  play :g4
-  sleep 0.5
-  play :g4
-  sleep 1
+  13.times do
+    sample :guit_snare_soft
+    play arrays3[c]
+    sleep sleeps3[z]
+    c = 0 + 1
+    z = 0 + 1
+  end
+  c = 0
+  z = 0
 end
 live_loop :line4 do
-  play :c3
-  sleep 4
-  play :e4
-  sleep 4
+  2.times do
+    sample :drum_bass_soft
+    play arrays4[d]
+    sleep sleeps4[m]
+    d = 0 + 1
+    m = 0 + 1
+  end
+  d = 0
+  m = 0
 end
 live_loop :line5 do
   sleep 4
-  play :g4
-  sleep 0.5
-  play :a4
-  sleep 0.5
-  play :a4
-  sleep 0.5
-  play :a4
-  sleep 1
-  play :c5
-  sleep 1
-  play :c5
-  sleep 1
-  play :c5
-  sleep 1
-  play :d5
-  sleep 1
+  8.times do
+    play arrays5[e]
+    sleep sleeps5[n]
+    e = 0 + 1
+    n = 0 + 1
+  end
+  e = 0
+  n = 0
 end
