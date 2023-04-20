@@ -1,16 +1,42 @@
 # westcoast #2 by lana del ray
+arrays1 = [:d5, :d5]
+a = 0
+arrays2 = [:b4, :b4]
+b = 0
+arrays4 = [:b2, :c3]
+c = 0
+arrays5 = [:F4, :g4, :b4, :b4, :b4, :c5, :c5, :c5, :c5, :b4, :b4, :b4]
+d = 0
+sleeps1 = [4, 4]
+x = 0
+sleeps2 = [4, 4]
+y = 0
+sleeps4 = [4, 4]
+w = 0
+sleeps5 = [1, 0.5, 0.5, 0.5, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1]
+z = 0
 use_bpm 115
+
 live_loop :line6 do
-  play :d5
-  sleep 4
-  play :C5
-  sleep 4
+  2.times do
+    play arrays1[a]
+    sleep sleeps1[x]
+    x = 0 + 1
+    a = 0 + 1
+  end
+  x = 0
+  a = 0
 end
 
 live_loop :line7 do
-  play :b4
-  sleep 4
-  play :b4
+  2.times do
+    play arrays2[b]
+    sleep sleeps2[y]
+    b = 0 + 1
+    y = 0 + 1
+  end
+  b = 0
+  y = 0
 end
 
 live_loop :line8 do
@@ -28,7 +54,7 @@ live_loop :line8 do
   play :g4
   sleep 1
   play :g4
-  play :f4                         #parametize function starts here
+  play :f4          #parametize function starts here
   sleep 0.5
   play :f4
   sleep 0.5
@@ -43,36 +69,24 @@ live_loop :line8 do
 end
 
 live_loop :line9 do
-  play :b2
-  sleep 4
-  play :c3
-  sleep 4
+  2.times do
+    play arrays4[c]
+    sleep sleeps4[w]
+    c = 0 + 1
+    w = 0 + 1
+  end
+  c = 0
+  w = 0
 end
 
 live_loop :line10 do
-  sleep 5
-  play :f4
-  sleep 1
-  play :g4
-  sleep 0.5
-  play :b4
-  sleep 0.5
-  play :b4
-  sleep 0.5
-  play :b4
-  sleep 1
-  play :c5
-  sleep 1
-  play :c5
-  sleep 0.5
-  play :c5
-  sleep 0.5
-  play :c5
-  sleep 0.5
-  play :b4
-  sleep 0.5
-  play :b4
-  sleep 0.5
-  play :b4
-  sleep 1
+  sleep 4
+  12.times do
+    play arrays5[d]
+    sleep sleeps5[z]
+    d = 0 + 1
+    z = 0 + 1
+  end
+  d = 0
+  z = 0
 end
