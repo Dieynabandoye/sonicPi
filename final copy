@@ -1,0 +1,138 @@
+use_bpm 115
+arrays1 = [:e5, :e5, :d5, :d5]
+a = 0
+arrays2 = [:c5, :b4, :b4, :b4]
+b = 0
+arrays3 = [:g4, :g4,:g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4]
+c = 0
+arrays4 = [:c3, :e4, :b2, :c3 ]
+d = 0
+arrays5 = [ :g4, :a4, :a4, :a4, :c5, :c5, :c5, :d5, :F4, :g4, :b4, :b4, :b4, :c5, :c5, :c5, :c5, :b4, :b4, :b4]
+e = 0
+sleeps1 = [4, 4, 4, 4]
+x = 0
+sleeps2 = [4, 4, 4, 4]
+y = 0
+sleeps3 = [1, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1]
+z = 0
+sleeps4 = [4, 4, 4, 4]
+m = 0
+sleeps5 = [0.5, 0.5, 0.5, 1, 1, 1, 1, 1, 0.5, 0.5, 0.5, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1]
+n = 0
+define :function do |r|
+  play :g4
+  sleep 1
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 0.5
+  play :g4
+  sleep 1
+  play :g4
+  play r          #parametize function starts here
+  sleep 0.5
+  play r
+  sleep 0.5
+  play r
+  sleep 1
+  play r
+  sleep 0.5
+  play r
+  sleep 0.5
+  play r
+  sleep 1
+end
+# external samples
+Del = "C:/Users/kiadi/Downloads/New folder/idk.wav"
+Ray = "C:/Users/kiadi/Downloads/New folder/lala.wav"
+lan = "C:/Users/kiadi/Downloads/New folder/fire.wav"
+wes = "C:/Users/kiadi/Downloads/New folder/ytmp3free.cc_lana-del-rey-west-coast-official-acapella-youtubemp3free.org.wav"
+cos = "C:/Users/kiadi/Downloads/New folder/up.wav"
+
+live_loop :line1 do
+  4.times do
+    play arrays1[a]
+    sleep sleeps1[x]
+    a = a + 1
+    x = x + 1
+  end
+  a = 0
+  x = 0
+end
+live_loop :line2 do
+  4.times do
+    play arrays2[b]
+    sleep sleeps2[y]
+    b = b + 1
+    y = y + 1
+  end
+  b = 0
+  y = 0
+end
+live_loop :line3 do
+  function :f4  # parameterized function
+end
+live_loop :line4 do
+  4.times do
+    play arrays4[d]
+    sleep sleeps4[m]
+    d = d + 1
+    m = m + 1
+  end
+  d = 0
+  m = 0
+end
+live_loop :line5 do
+  sleep 4
+  21.times do
+    play arrays5[e]
+    sleep sleeps5[n]
+    e = 0 + 1
+    n = 0 + 1
+  end
+  e = 0
+  n = 0
+end
+live_loop :vocals do
+  sleep 4
+  sample Del, amp: 0.5
+  sleep 2.3                
+  sample Ray, amp: 1
+  sleep 1.8
+  sample lan, amp: 2        # fade in fade out
+  sleep 2
+  sample wes, amp: 1
+  sleep 1
+  sample cos, amp: 0.5
+  sleep 1
+end
