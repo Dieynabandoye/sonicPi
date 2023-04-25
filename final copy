@@ -5,9 +5,9 @@ arrays2 = [:c5, :b4, :b4, :b4]
 b = 0
 arrays3 = [:g4, :g4,:g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4, :g4]
 c = 0
-arrays4 = [:c3, :e4, :b2, :c3 ]
+arrays4 = [:c3, :e4, :b2, :c3]
 d = 0
-arrays5 = [ :g4, :a4, :a4, :a4, :c5, :c5, :c5, :d5, :F4, :g4, :b4, :b4, :b4, :c5, :c5, :c5, :c5, :b4, :b4, :b4]
+arrays5 = [:g4, :a4, :a4, :a4, :c5, :c5, :c5, :d5, :F4, :g4, :b4, :b4, :b4, :c5, :c5, :c5, :c5, :b4, :b4, :b4]
 e = 0
 sleeps1 = [4, 4, 4, 4]
 x = 0
@@ -19,6 +19,7 @@ sleeps4 = [4, 4, 4, 4]
 m = 0
 sleeps5 = [0.5, 0.5, 0.5, 1, 1, 1, 1, 1, 0.5, 0.5, 0.5, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 1]
 n = 0
+
 define :function do |r|
   play :g4
   sleep 1
@@ -73,11 +74,11 @@ define :function do |r|
   sleep 1
 end
 # external samples
-Del = "C:/Users/kiadi/Downloads/New folder/idk.wav"
-Ray = "C:/Users/kiadi/Downloads/New folder/lala.wav"
-lan = "C:/Users/kiadi/Downloads/New folder/fire.wav"
-wes = "C:/Users/kiadi/Downloads/New folder/ytmp3free.cc_lana-del-rey-west-coast-official-acapella-youtubemp3free.org.wav"
-cos = "C:/Users/kiadi/Downloads/New folder/up.wav"
+missing = "C:/Users/kiadi/Downloads/New folder/parliement.wav"
+tada = "C:/Users/kiadi/Downloads/New folder/tada.wav"
+
+
+use_synth :piano
 
 live_loop :line1 do
   4.times do
@@ -117,22 +118,19 @@ live_loop :line5 do
   21.times do
     play arrays5[e]
     sleep sleeps5[n]
-    e = 0 + 1
-    n = 0 + 1
+    e = e + 1
+    n = e + 1
   end
   e = 0
   n = 0
 end
-live_loop :vocals do
-  sleep 4
-  sample Del, amp: 0.5
-  sleep 2.3                
-  sample Ray, amp: 1
-  sleep 1.8
-  sample lan, amp: 2        # fade in fade out
-  sleep 2
-  sample wes, amp: 1
-  sleep 1
-  sample cos, amp: 0.5
-  sleep 1
+
+1.times do
+  sample tada, amp: 3
+  sleep 7
+  sample tada, amp: 1
+  sleep 7
+  sample tada, amp: 0.5
+  sleep 7
+  sample tada, amp: 0.25
 end
